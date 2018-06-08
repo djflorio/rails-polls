@@ -1,0 +1,17 @@
+<%= form_with(model: @question, local: true) do |form| %>
+
+  <% if @question.errors.any? %>
+    <ul class="error-list">
+      <% @question.errors.full_messages.each do |msg| %>
+        <li class="error-message"><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <p>
+    <%= form.text_field :text %>
+  </p>
+
+  <%= form.submit %>
+
+<% end %>
