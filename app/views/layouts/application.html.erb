@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to 'home', '/' %>
+      <%= link_to 'questions', questions_path %>
+    </nav>
     <%= yield %>
   </body>
 </html>

@@ -1,3 +1,8 @@
-<%= @question.text %>
-<%= render @question.answers %>
-<%= render 'answers/form' %>
+<h1>View Question</h1>
+<%= link_to 'edit', edit_question_path(@question) %>
+<p>
+  <%= @question.text %>
+</p>
+<p>
+  <%= render @question.answers %>
+</p>
