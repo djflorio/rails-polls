@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_08_192944) do
+ActiveRecord::Schema.define(version: 2018_06_09_155429) do
+
+  create_table "answers", force: :cascade do |t|
+    t.string "text"
+    t.integer "votes"
+    t.integer "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
 
   create_table "questions", force: :cascade do |t|
     t.string "text"
